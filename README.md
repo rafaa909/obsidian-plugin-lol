@@ -54,7 +54,7 @@ Quick starting guide for new plugin devs:
 
 ## Insertar iconos de campeones
 
-En el editor, haz clic derecho y selecciona **Insertar icono de campeón** o **Insertar icono de objeto**. Para objetos, elige primero Español o English y luego busca y selecciona uno para insertar su imagen Markdown en la posición del cursor. Si hay objetos repetidos, se conserva el registro con el ID más bajo y se eliminan las etiquetas del nombre. Las listas se cargan desde Data Dragon (versión 16.23.1) al abrir cada selector, por lo que se necesita conexión a Internet.
+En el editor, haz clic derecho y selecciona **Insertar icono de campeón**, **Insertar icono de objeto** o **Insertar icono de hechizo de invocador**. Para objetos, elige primero Español o English; después busca y selecciona uno para insertar su imagen Markdown en la posición del cursor. Si hay objetos repetidos, se conserva el registro con el ID más bajo y se eliminan las etiquetas del nombre. Los hechizos de invocador disponibles son Heal, Ghost, Smite, Barrier, Exhaust, Clarity, Snow Ball, Flash, Teleport, Cleanse e Ignite. Las listas se cargan desde Data Dragon (versión 16.23.1), por lo que se necesita conexión a Internet.
 
 ## Manually installing the plugin
 
