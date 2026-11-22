@@ -6,3 +6,273 @@ available in the app when your plugin is enabled.
 If your plugin does not need CSS, delete this file.
 
 */
+
+.modal.lol-rune-modal {
+	width: min(980px, calc(100vw - 40px));
+	max-width: 980px;
+}
+
+.lol-rune-modal .modal-content {
+	max-height: 82vh;
+	overflow-y: auto;
+}
+
+.lol-rune-help {
+	color: var(--text-muted);
+	margin-top: 0;
+}
+
+.lol-rune-builder {
+	display: grid;
+	grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+	gap: 1.5rem;
+}
+
+.lol-rune-panel {
+	min-width: 0;
+}
+
+.lol-rune-section-heading {
+	margin: 1.1rem 0 0.65rem;
+	text-align: center;
+}
+
+.lol-rune-row-heading {
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+	font-weight: var(--font-semibold);
+	margin: 0.7rem 0 0.35rem;
+	text-align: center;
+}
+
+.lol-rune-icon-row {
+	align-items: center;
+	border-bottom: 1px solid var(--background-modifier-border);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.45rem;
+	justify-content: center;
+	min-height: 4.5rem;
+	padding: 0.45rem 0;
+}
+
+.lol-rune-style-row {
+	border-bottom: 0;
+	min-height: 4rem;
+}
+
+.lol-rune-icon-button {
+	align-items: center;
+	background: transparent;
+	border: 2px solid transparent;
+	border-radius: 50%;
+	cursor: pointer;
+	display: inline-flex;
+	height: 3.5rem;
+	justify-content: center;
+	padding: 0.3rem;
+	transition:
+		border-color 120ms ease,
+		background-color 120ms ease,
+		transform 120ms ease;
+	width: 3.5rem;
+}
+
+.lol-rune-icon-button:hover {
+	background: var(--background-modifier-hover);
+	transform: scale(1.08);
+}
+
+.lol-rune-icon-button:focus-visible {
+	outline: 2px solid var(--interactive-accent);
+	outline-offset: 2px;
+}
+
+.lol-rune-icon-button img {
+	height: 100%;
+	object-fit: contain;
+	width: 100%;
+}
+
+.lol-rune-icon-button.lol-rune-shard {
+	height: 2.6rem;
+	padding: 0.15rem;
+	width: 2.6rem;
+}
+
+.lol-rune-icon-button.is-loading {
+	background: var(--background-secondary);
+}
+
+.lol-rune-icon-button.is-unavailable {
+	border-color: var(--text-error);
+}
+
+.lol-rune-primary.is-selected {
+	border-color: #d6bd72;
+	background: rgb(214 189 114 / 12%);
+}
+
+.lol-rune-secondary.is-selected {
+	border-color: #55c9d6;
+	background: rgb(85 201 214 / 12%);
+}
+
+.lol-rune-shard.is-selected {
+	border-color: var(--interactive-accent);
+	background: var(--background-modifier-hover);
+}
+
+.lol-rune-actions {
+	display: flex;
+	gap: 0.6rem;
+	justify-content: flex-end;
+	margin-top: 1rem;
+}
+
+@media (max-width: 720px) {
+	.modal.lol-rune-modal {
+		width: calc(100vw - 24px);
+	}
+
+	.lol-rune-builder {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 0.5rem;
+	}
+}
+
+.lol-rune-page-output {
+	background: #1b1c1c;
+	border: 1px solid rgb(214 189 114 / 35%);
+	border-radius: 0.75rem;
+	box-sizing: border-box;
+	color: #e5e5e5;
+	margin: 1rem auto;
+	max-width: 900px;
+	overflow: hidden;
+	padding: 1.2rem;
+	width: 100%;
+}
+
+.lol-rune-page-title {
+	color: #e5e5e5;
+	font-size: 1.3em;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+	text-align: left;
+}
+
+.lol-rune-page-layout {
+	display: grid;
+	gap: 1.25rem;
+	grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+}
+
+.lol-rune-page-column {
+	align-content: start;
+	display: grid;
+	grid-template-rows: repeat(6, auto);
+	min-width: 0;
+}
+
+.lol-rune-page-icon {
+	align-items: center;
+	border: 2px solid transparent;
+	border-radius: 50%;
+	box-sizing: border-box;
+	display: inline-flex;
+	filter: grayscale(1);
+	height: clamp(2rem, 5vw, 3.25rem);
+	justify-content: center;
+	opacity: 0.42;
+	padding: 0.15rem;
+	width: clamp(2rem, 5vw, 3.25rem);
+}
+
+.lol-rune-page-icon-keystone {
+	height: clamp(2.5rem, 6vw, 3.75rem);
+	width: clamp(2.5rem, 6vw, 3.75rem);
+}
+
+.lol-rune-page-icon img {
+	height: 100%;
+	object-fit: contain;
+	width: 100%;
+}
+
+.lol-rune-page-icon-shard {
+	height: clamp(1.25rem, 2.5vw, 1.65rem);
+	padding: 0.1rem;
+	width: clamp(1.25rem, 2.5vw, 1.65rem);
+}
+
+.lol-rune-page-icon.is-selected {
+	filter: none;
+	opacity: 1;
+}
+
+.lol-rune-page-icon-primary.is-selected {
+	border-color: #d6bd72;
+	box-shadow: 0 0 0.5rem rgb(214 189 114 / 55%);
+}
+
+.lol-rune-page-icon-secondary.is-selected {
+	border-color: #55c9d6;
+	box-shadow: 0 0 0.5rem rgb(85 201 214 / 55%);
+}
+
+.lol-rune-page-icon-shard.is-selected {
+	border-color: #d6bd72;
+}
+
+.lol-rune-page-row {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	min-height: 3.75rem;
+}
+
+.lol-rune-page-row-shard {
+	min-height: 2rem;
+}
+
+.lol-rune-page-icons {
+	align-items: center;
+	display: grid;
+	gap: 0.25rem;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	justify-items: center;
+	width: 100%;
+}
+
+.lol-rune-page-icons-four {
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.lol-rune-page-icons-shard {
+	gap: 0.15rem;
+	grid-template-columns: repeat(3, auto);
+	width: auto;
+}
+
+.lol-match-puuid {
+	color: var(--text-muted);
+	font-size: var(--font-ui-smaller);
+	overflow-wrap: anywhere;
+}
+
+.lol-match-id-list {
+	max-height: 55vh;
+	overflow-y: auto;
+}
+
+@media (max-width: 720px) {
+	.lol-rune-page-output {
+		padding: 0.75rem;
+	}
+
+	.lol-rune-page-layout {
+		gap: 0.75rem;
+		grid-template-columns: minmax(0, 1fr);
+	}
+}

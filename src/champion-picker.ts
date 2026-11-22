@@ -5,7 +5,7 @@ import { NameSuggestModal } from './name-suggest-modal';
 const CHAMPION_DATA_URL = `${DATA_DRAGON_CDN}/data/en_US/champion.json`;
 const CHAMPION_IMAGE_URL = `${DATA_DRAGON_CDN}/img/champion`;
 
-interface Champion {
+export interface Champion {
 	id: string;
 	name: string;
 }
@@ -30,7 +30,7 @@ export async function openChampionPicker(app: App, editor: Editor): Promise<void
 	}
 }
 
-async function loadChampions(): Promise<Champion[]> {
+export async function loadChampions(): Promise<Champion[]> {
 	if (cachedChampions) {
 		return cachedChampions;
 	}

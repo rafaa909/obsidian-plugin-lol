@@ -52,9 +52,19 @@ Quick starting guide for new plugin devs:
 - `npm i` to install dependencies.
 - `npm run dev` to start compilation in watch mode.
 
+## Fase 1: conexión con Riot API
+
+1. En Obsidian, abre **Ajustes → League of Legends Toolkit**.
+2. Introduce tu Riot ID en el formato `Nombre#TAG`, selecciona el servidor y añade tu API key personal de Riot.
+3. Ejecuta el comando **Consultar partidas clasificatorias solo/duo recientes** desde la paleta de comandos.
+
+La consulta resuelve la cuenta con Account-V1 y solicita hasta 20 IDs de partidas al Match-V5 usando el filtro oficial de cola `420` (Ranked Solo). La API key se guarda en los datos locales del plugin, se envía únicamente a Riot por HTTPS y no se incluye en notas ni en el código distribuido. Las claves de desarrollo de Riot caducan cada 24 horas; para publicar el producto, registra la aplicación y sigue las políticas vigentes de Riot.
+
+League of Legends Toolkit is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. League of Legends and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+
 ## Insertar iconos de campeones
 
-En el editor, haz clic derecho y selecciona **Insertar icono de campeón**, **Insertar icono de objeto** o **Insertar icono de hechizo de invocador**. Para objetos, elige primero Español o English; después busca y selecciona uno para insertar su imagen Markdown en la posición del cursor. Si hay objetos repetidos, se conserva el registro con el ID más bajo y se eliminan las etiquetas del nombre. Los hechizos de invocador disponibles son Heal, Ghost, Smite, Barrier, Exhaust, Clarity, Snow Ball, Flash, Teleport, Cleanse e Ignite. Las listas se cargan desde Data Dragon (versión 16.23.1), por lo que se necesita conexión a Internet.
+En el editor, haz clic derecho y abre la sección **Insertar** para elegir **Insertar icono de campeón**, **Insertar habilidad de campeón**, **Insertar icono de objeto**, **Insertar icono de hechizo de invocador**, **Insertar icono de runa** o **Configurar runas**. Para objetos, elige primero Español o English; después busca y selecciona uno para insertar su imagen Markdown en la posición del cursor. La opción de runas permite buscar una runa e insertar su icono individual. La opción de habilidades permite elegir un campeón y después insertar el icono de su pasiva o de sus habilidades Q, W, E y R. Si hay objetos repetidos, se conserva el registro con el ID más bajo y se eliminan las etiquetas del nombre. Los hechizos de invocador disponibles son Heal, Ghost, Smite, Barrier, Exhaust, Clarity, Snow Ball, Flash, Teleport, Cleanse e Ignite. El configurador de runas permite crear una página completa en español con dos ramas y los tres fragmentos; se inserta en la nota como una cuadrícula con todos los iconos y las selecciones resaltadas. Para modificarla, haz clic derecho sobre la página en la vista previa y selecciona **Editar página de runas**. Las listas se cargan desde Data Dragon (versión 16.23.1), por lo que se necesita conexión a Internet.
 
 ## Manually installing the plugin
 
